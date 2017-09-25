@@ -41,7 +41,7 @@ static inline bool isSpace(char ch)
 
 The function `determineLineType` determines the type of a line.
 
-```
+```c
 static inline LineType determineLineType(char const * line)
 {
     char const * ptr = line;
@@ -49,7 +49,7 @@ static inline LineType determineLineType(char const * line)
 
 First, we remove all trailing spaces in the input line.
 
-```
+```c
     while (isSpace(*ptr))
     {
         ptr++;
@@ -83,7 +83,7 @@ First, we remove all trailing spaces in the input line.
 
 The main function blah blah blah
 
-```
+```c
 int main()
 {
     bool removeEmptyLines = true;
