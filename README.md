@@ -5,11 +5,11 @@ Markify is a...
 
 We start out by including the following standard libraries.
 
-
-    #include <stdio.h> // fprintf, stdin, stdout, stderr
-    #include <stdlib.h> // EXIT_FAILURE, EXIT_SUCCESS
-    #include <stdbool.h>
-
+```c
+#include <stdio.h> // fprintf, stdin, stdout, stderr
+#include <stdlib.h> // EXIT_FAILURE, EXIT_SUCCESS
+#include <stdbool.h>
+```
 
 The macro `MAXIMUM_LINE_WIDTH` determines the maximum line-width.
 
