@@ -8,7 +8,17 @@ Markify is a...
     #include <stdlib.h> // EXIT_FAILURE, EXIT_SUCCESS
     #include <stdbool.h>
 
+## Constants
+
+`MAXIMUM_LINE_WIDTH` determines the maximum line-width.
+
+
     #define MAXIMUM_LINE_WIDTH 4096
+
+
+We categorize lines into four types; *empty*, *code*, *markdown*, and *empty markdown*. These
+types are captured in the following enum:
+
 
     typedef enum
     {
@@ -117,3 +127,4 @@ The main function blah blah blah
 
         return EXIT_SUCCESS;
     }
+Program ended with exit code: 0
