@@ -2,17 +2,14 @@
 
 Markify is a...
 
-## Dependencies
+
+We start out by including the following standard libraries.
+
 
     #include <stdio.h> // fprintf, stdin, stdout, stderr
     #include <stdlib.h> // EXIT_FAILURE, EXIT_SUCCESS
     #include <stdbool.h>
 
-## Prototypes
-
-    static inline bool isSpace(char ch);
-
-## Constants
 
 The macro `MAXIMUM_LINE_WIDTH` determines the maximum line-width.
 
@@ -34,7 +31,15 @@ types are captured in the following enum:
     }
     LineType;
 
-## Functions
+
+The function `isSpace` returns true if the character `ch` is either a space or a tab.
+
+
+    static inline bool isSpace(char ch)
+    {
+        return ch == ' ' || ch == '\t';
+    }
+
 
 The function `determineLineType` determines the type of a line.
 
@@ -44,7 +49,7 @@ The function `determineLineType` determines the type of a line.
         char const * ptr = line;
 
 
-/// First, we remove all trailing spaces in the input line.
+First, we remove all trailing spaces in the input line.
 
 
         while (isSpace(*ptr))
@@ -75,16 +80,7 @@ The function `determineLineType` determines the type of a line.
         {
             return LineType_code;
         }
-    }
-
-
-`isSpace` returns true if the character `ch` is either a space or a tab.
-
-
-    static inline bool isSpace(char ch)
-    {
-        return ch == ' ' || ch == '\t';
-    }
+    } // determineLineType
 
 
 The main function blah blah blah
