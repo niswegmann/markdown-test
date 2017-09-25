@@ -141,4 +141,24 @@ The main function blah blah blah
 
         return EXIT_SUCCESS;
     }
+
+
+This is a syntax tree:
+
+```
+     +
+     |
+    ---
+   /   \
+ log    +
+  |     |
+1.234  ---
+      /   \
+   1.234   *
+           |
+          ---
+         /   \
+        x  1.2346
+```
+
 Program ended with exit code: 0
