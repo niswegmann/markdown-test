@@ -8,9 +8,13 @@ Markify is a...
     #include <stdlib.h> // EXIT_FAILURE, EXIT_SUCCESS
     #include <stdbool.h>
 
+## Prototypes
+
+    static inline bool isSpace(char ch);
+
 ## Constants
 
-`MAXIMUM_LINE_WIDTH` determines the maximum line-width.
+The macro `MAXIMUM_LINE_WIDTH` determines the maximum line-width.
 
 
     #define MAXIMUM_LINE_WIDTH 4096
@@ -29,14 +33,17 @@ types are captured in the following enum:
     }
     LineType;
 
-    static inline bool isSpace(char ch)
-    {
-        return ch == ' ' || ch == '\t';
-    }
+
+The function `determineLineType` determines the type of a line.
+
 
     static inline LineType determineLineType(char const * line)
     {
         char const * ptr = line;
+
+
+/// First, we remove all trailing spaces in the input line.
+
 
         while (isSpace(*ptr))
         {
@@ -66,6 +73,11 @@ types are captured in the following enum:
         {
             return LineType_code;
         }
+    }
+
+    static inline bool isSpace(char ch)
+    {
+        return ch == ' ' || ch == '\t';
     }
 
 
