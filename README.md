@@ -23,6 +23,7 @@ The macro `MAXIMUM_LINE_WIDTH` determines the maximum line-width.
 We categorize lines into four types; *empty*, *code*, *markdown*, and *empty markdown*. These
 types are captured in the following enum:
 
+## Types
 
     typedef enum
     {
@@ -33,6 +34,7 @@ types are captured in the following enum:
     }
     LineType;
 
+## Functions
 
 The function `determineLineType` determines the type of a line.
 
@@ -74,6 +76,10 @@ The function `determineLineType` determines the type of a line.
             return LineType_code;
         }
     }
+
+
+`isSpace` returns true if the character `ch` is either a space or a tab.
+
 
     static inline bool isSpace(char ch)
     {
