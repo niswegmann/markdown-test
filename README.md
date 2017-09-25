@@ -20,17 +20,16 @@ The macro `MAXIMUM_LINE_WIDTH` determines the maximum line-width.
 We categorize lines into four types; *empty*, *code*, *markdown*, and *empty markdown*. These
 types are captured in the following enum:
 
-## Types
-
-    typedef enum
-    {
-        LineType_empty = 0,
-        LineType_code = 1,
-        LineType_markdown = 2,
-        LineType_markdown_empty = 3
-    }
-    LineType;
-
+```c
+typedef enum
+{
+    LineType_empty = 0,
+    LineType_code = 1,
+    LineType_markdown = 2,
+    LineType_markdown_empty = 3
+}
+LineType;
+```
 
 The function `isSpace` returns true if the character `ch` is either a space or a tab.
 
